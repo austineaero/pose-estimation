@@ -1,0 +1,152 @@
+p {
+    text-align: justify;
+}
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.page-back-1
+{
+    background-image: url("../images/background-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.scroll-col {
+    max-height: 540px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+}
+
+.circle-img-border {
+    padding: 10px;
+    border-radius: 40%;
+}
+
+.rounded-border-30 {
+    border-radius: 30px;
+}
+
+.rounded-border-40 {
+    border-radius: 40px;
+}
+
+.rounded-border-50 {
+    border-radius: 50px;
+}
+
+.rounded-border-70 {
+    border-radius: 70px;
+}
+
+.mw-50 {
+    width: 100%;
+}
+
+.small-screen-nav {
+    display: none;
+}
+
+.big-screen-nav {
+    display: block;
+}
+
+.camera-active {
+    transform: scale(1.04);
+    background-color: #212529 !important;
+}
+
+.card-hover-cameras .card:hover {
+    cursor: pointer;
+    animation-duration: 2s;
+    transform: scale(1.05);
+    animation-name: camera-hover;
+}
+
+.card-hover-cameras a:link {
+    text-decoration: none;
+}
+
+.icon-anim-camera:hover svg {
+    animation-duration: 0.5s;
+    animation-name: rotation-camera;
+}
+
+.icon-anim:hover svg {
+    animation-duration: 0.7s;
+    animation-name: rotation-camera-icon;
+}
+
+@keyframes rotation-camera {
+
+    0% {transform: rotate(0deg); }
+    25% {transform: rotate(10deg) scale(1.1); }
+    50% {transform: rotate(0deg); }
+    75% {transform: rotate(-10deg) scale(1.1); }
+    100% {transform: rotate(0deg); }
+}
+
+@keyframes rotation-camera-icon {
+
+    0% {transform: rotate(0deg); }
+    25% {transform: rotate(25deg) scale(1.5); }
+    50% {transform: rotate(0deg); }
+    75% {transform: rotate(-25deg) scale(1.5); }
+    100% {transform: rotate(0deg); }
+}
+
+@media (min-width: 992px) {
+    .mw-50 {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .scroll-col {
+        height: 100%;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        overflow-y: scroll;
+    }    
+}
+
+@media (max-width: 768px) {
+    .big-screen-nav {
+        display: none;
+    }
+    .small-screen-nav {
+        display: block;
+    }
+}

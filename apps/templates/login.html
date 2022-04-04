@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+		<!-- Required meta tags -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
+        <!-- Icon and Custom CSS -->
+        <link rel="icon" href="images/PEGA_logo_small.png">
+        <link href="css/stylesheet.css" rel="stylesheet">
+
+        <!-- Title -->
+	    <title>PEGA System Central Server</title>
+	</head>
+	<body class="page-back-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hide">
+            <symbol id="lock" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M9.655 8H2.333c-.264 0-.398.068-.471.121a.73.73 0 0 0-.224.296 1.626 1.626 0 0 0-.138.59V14c0 .342.076.531.14.635.064.106.151.18.256.237a1.122 1.122 0 0 0 .436.127l.013.001h7.322c.264 0 .398-.068.471-.121a.73.73 0 0 0 .224-.296 1.627 1.627 0 0 0 .138-.59V9c0-.342-.076-.531-.14-.635a.658.658 0 0 0-.255-.237A1.122 1.122 0 0 0 9.655 8zm.012-1H2.333C.5 7 .5 9 .5 9v5c0 2 1.833 2 1.833 2h7.334c1.833 0 1.833-2 1.833-2V9c0-2-1.833-2-1.833-2zM8.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
+            </symbol>
+            <symbol id="person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg>
+            </symbol>
+        </svg>
+		<main class="container mb-5">
+            <div class="card mw-50 mx-auto mt-5 mb-5 p-4 rounded-border-50">
+                <img class="m-auto img-fluid" src="images/PEGA_logo.png" alt="PEGA System">
+                <div class="card-header mt-3 text-center bg-dark text-white font-italic mb-3">
+                    <strong>Sign In</strong> to the Pose Estimation for Gait Assessment (PEGA) Sytem Central Server
+                </div>
+
+                <form action="treatments/t_sign_in.php" method="post">
+                    <div class="input-group mt-1 mb-2">
+                        <span class="input-group-text"><svg class="bi" width="20" height="20"><use xlink:href="#person"/></svg></span>
+                        <input class="form-control" type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text"><svg class="bi" width="20" height="20"><use xlink:href="#lock"/></svg></span>
+                        <input class="form-control" type="password" id="password" name="password" placeholder="Password" required>
+                    </div> 
+                    <div class="d-grid mt-3 mb-2">
+                        <input class="btn btn-dark" type="submit" value="Sign In">
+                    </div>
+                </form>
+            </div>     			
+		</main>
+	</body>
+</html>
