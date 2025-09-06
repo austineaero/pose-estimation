@@ -1,6 +1,6 @@
 # PEGA: Pose Estimation for Gait Analysis
 
-**Authors:** Augustine Osaigbevo, Gexuan Feng, Nicolas Guzman, Anthony Juel, Sushrut Pakhale
+**Authors:** Augustine Osaigbevo
 
 ---
 
