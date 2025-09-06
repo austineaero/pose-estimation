@@ -24,7 +24,7 @@ Pose Estimation for Gait Analysis (PEGA) is a state-of-the-art system that analy
 ### Why this matters (Impact)
 
 - **Safety:** Earlier detection of potential mobility issues reduces risk in crowded terminals and enables proactive assistance before an incident.
-- **Cost & Operations:** Predictive, on-demand assistance reduces dependence on pre-booked services and third-party callouts, cutting disruptions in terminal flows and improving **service-level adherence** (wait time to assist, time-to-escort, etc.).
+- **Cost & Operations:** Predictive, on-demand assistance reduces dependence on pre-booked services and third-party callouts, cutting disruptions in terminal flows and improving service-level adherence (wait time to assist, time-to-escort, etc.).
 - **Passenger Experience:** A more dignified, seamless journey for older passengers and people with disabilities — aligned with accessibility commitments.
 
 ---
@@ -82,17 +82,17 @@ Pose Estimation for Gait Analysis (PEGA) is a state-of-the-art system that analy
 
 ### 1) Person Detection & Tracking
 
-- Detect people in each frame and **persist identity across frames** (tracking+ReID) so each subject’s motion can be analysed as a single temporal sequence.
+- Detect people in each frame and persist identity across frames (tracking+ReID) so each subject’s motion can be analysed as a single temporal sequence.
 
 ### 2) Pose Estimation (Skeletal Keypoints)
 
 - For each tracked person, estimate 2D keypoints per frame (e.g., hips, knees).
-- Output: per-frame **skeleton JSON** (ID, bbox, score, keypoints).
+- Output: per-frame skeleton JSON (ID, bbox, score, keypoints).
 
 ### 3) Gait Cycle Feature Extraction
 
-* Convert keypoints to **joint angles** over a **0–100% gait cycle**.
-* Smooth and **normalize** curves; stack hip/knee signals into a fixed 2D “**gait signature**” (e.g., 20×20), robust to speed changes.
+* Convert keypoints to joint angles over a 0–100% gait cycle.
+* Smooth and normalise curves; stack hip/knee signals into a fixed 2D *gait signature* (e.g., 20×20), robust to speed changes.
 
 ### 4) Classification (Normal vs Abnormal)
 
@@ -109,7 +109,7 @@ Pose Estimation for Gait Analysis (PEGA) is a state-of-the-art system that analy
 
 ## Results & Performance
 
-### Simulated Crowd (Mixamo)
+### Simulated Crowd
 
 * 9 subjects (8 normal, 1 abnormal): the abnormal subject is correctly flagged in real time; normal subjects produce stable, “double-band” gait signatures.
 <img width="763" height="425" alt="normal_gait" src="https://github.com/user-attachments/assets/1d57c240-f0ad-4bae-bd14-78f531113003" />
@@ -123,9 +123,13 @@ Pose Estimation for Gait Analysis (PEGA) is a state-of-the-art system that analy
 ### Classifier Metrics
 
 * On a 30-subject test (20 normal / 10 abnormal): **Accuracy 96.7%**, **F1 ≈ 0.947**; 1 false negative noted (abnormal predicted normal).
+<div align="center">
+  <img width="48%" alt="binary loss" src="https://github.com/user-attachments/assets/c02d54ae-20ec-443e-a951-88f84a58fa5a" style="display: inline-block;"> 
+  <img width="48%" alt="confusion matrix" src="https://github.com/user-attachments/assets/42268a18-87c0-4321-ba71-98b375293ce1" style="display: inline-block;">
+</div>
   *Interpretation:* errors shrink with clearer lateral views and adequate sequence length; false negatives are mitigated by re-scoring over longer windows.
 
-> Airport-level impact: as observation increases (more frames), prediction uncertainty narrows — enabling **safer** decisions (earlier staff dispatch) and **lower cost** (fewer unnecessary interventions).
+> Airport-level impact: as observation increases (more frames), prediction uncertainty narrows — enabling safer decisions (earlier staff dispatch) and lower cost (fewer unnecessary interventions).
 
 ---
 
